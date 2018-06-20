@@ -98,23 +98,25 @@ describe('angular-promise-extras', function () {
   })
 
   describe('$q.resolve', function() {
-    it('resolves to the promise when passed a thenable', function() {
+    it('resolves to the promise when passed a thenable', function(done) {
       var testProm = $q.resolve(
         $q(function(resolve) { resolve('votegreen') })
       )
       .then(function(value) {
         expect(value).toBe('votegreen')
       })
+      .then(done, done.fail)
 
       $rootScope.$apply()
       return testProm
     })
 
-    it('resolves to the promise that returns a value when passed a value', function() {
+    it('resolves to the promise that returns a value when passed a value', function(done) {
       var testProm = $q.resolve('damn the conservatives')
       .then(function(value) {
         expect(value).toBe('damn the conservatives')
       })
+      .then(done, done.fail)
 
       $rootScope.$apply()
       return testProm

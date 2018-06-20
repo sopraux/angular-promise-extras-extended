@@ -1,5 +1,6 @@
-# angular-promise-extras
+# angular-promise-extras-extended
 
+This is a fork of [angular-promise-extras](https://github.com/ohjames/angular-promise-extras) in order to improve semantic with isFulfilled and isRejected
 [![build status](https://circleci.com/gh/ohjames/angular-promise-extras.png)](https://circleci.com/gh/ohjames/angular-promise-extras)
 
 ## Installation
@@ -8,20 +9,10 @@
 
 1. Install the package
     ```
-    npm install --save angular-promise-extras
+    npm install --save angular-promise-extras-extended
     ```
 
 2. `require`/`import` `angular-promise-extras`.
-3. Add the angular module `ngPromiseExtras` as a dependency of your application module.
-
-### Bower
-
-1. Install the package
-    ```
-    bower install --save angular-promise-extras
-    ```
-
-2. Add the bower source file to your web page.
 3. Add the angular module `ngPromiseExtras` as a dependency of your application module.
 
 ## Usage

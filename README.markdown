@@ -26,9 +26,9 @@ asyncVals.push(3)
 
 $q.allSettled(asyncVals).then(function(values) {
   expect(values).toEqual([
-    { state: 'fulfilled', value: 1 },
-    { state: 'rejected', reason: 2 },
-    { state: 'fulfilled', value: 3 },
+    { state: 'fulfilled', value: 1, isFulfilled: true, isRejected: false },
+    { state: 'rejected', reason: 2, isFulfilled: false, isRejected: true },
+    { state: 'fulfilled', value: 3, isFulfilled: true, isRejected: false },
   ])
 })
 
@@ -47,9 +47,9 @@ var promises = { a: promisesArray[0], b: promisesArray[1], c: 3  }
 
 $q.allSettled(promises).then(function(values) {
   expect(values).toEqual({
-    a: { state: 'fulfilled', value: 1 },
-    b: { state: 'rejected', reason: 2 },
-    c: { state: 'fulfilled', value: 3 },
+    a: { state: 'fulfilled', value: 1, isFulfilled: true, isRejected: false },
+    b: { state: 'rejected', reason: 2, isFulfilled: false, isRejected: true },
+    c: { state: 'fulfilled', value: 3, isFulfilled: true, isRejected: false },
   })
 })
 

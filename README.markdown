@@ -1,7 +1,8 @@
 # angular-promise-extras-extended
 
 This is a fork of [angular-promise-extras](https://github.com/ohjames/angular-promise-extras) in order to improve semantic with isFulfilled and isRejected
-[![build status](https://circleci.com/gh/ohjames/angular-promise-extras.png)](https://circleci.com/gh/ohjames/angular-promise-extras)
+
+[![build status](https://travis-ci.org/sopraux/angular-promise-extras-extended.svg?branch=master)](https://travis-ci.org/sopraux/angular-promise-extras-extended.svg?branch=masters)
 
 ## Installation
 
